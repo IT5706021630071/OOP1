@@ -13,7 +13,7 @@ public class Trik {
 			s1=JOptionPane.showInputDialog("Enter character (A,B or C) : ");
 			ch = s1;
 			if(ch.length() > 50){
-				s2=JOptionPane.showInputDialog("Invalid input. Please enter again!!!");
+				JOptionPane.showMessageDialog(null,"Invalid input. Please enter again!!!",null,JOptionPane.INFORMATION_MESSAGE);
 			}
 		} while (ch.length() > 50);
 		character(A,B,C);
