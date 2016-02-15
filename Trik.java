@@ -1,22 +1,24 @@
-import java.util.Scanner;
 import java.lang.*;
-
+import javax.swing.JOptionPane;
 public class Trik {
-	public static void main(String[] args) {
+	public static void main(String[] args)
+	{
 		String ch;
 		int A = 1;
 		int B = 0;
 		int C = 0;
 		int temp=0;
-		Scanner scan = new Scanner(System.in);
+		String s1,s2;
 		do {
-			System.out.print("Enter character (A,B or C) : ");
-			ch = scan.nextLine();
+			s1=JOptionPane.showInputDialog("Enter character (A,B or C) : ");
+			ch = s1;
 			if(ch.length() > 50){
-				System.out.println("Invalid input. Please enter again!!!");
+				s2=JOptionPane.showInputDialog("Invalid input. Please enter again!!!");
 			}
 		} while (ch.length() > 50);
-		for (int i = 0; i < ch.length(); i++) {
+		character(A,B,C);
+		for (int i = 0; i < ch.length(); i++) 
+		{
 			if (ch.charAt(i) == 'A' || ch.charAt(i) == 'a') {
 				temp = A;
 				A = B;
@@ -31,12 +33,18 @@ public class Trik {
 				C = temp;
 			}
 		}
+	}
+	public static void character(int A,int B,int C)
+	{
+	
 		if (A == 1) {
-			System.out.println("Ball in glass : 1");
+			JOptionPane.showMessageDialog(null,"Ball in glass : 1",null, JOptionPane.INFORMATION_MESSAGE);
 		} else if (B == 1) {
-			System.out.println("Ball in glass : 2");
+			JOptionPane.showMessageDialog(null,"Ball in glass : 2",null, JOptionPane.INFORMATION_MESSAGE);
 		} else if (C == 1) {
-			System.out.println("Ball in glass : 3");
+			JOptionPane.showMessageDialog(null,"Ball in glass : 3",null, JOptionPane.INFORMATION_MESSAGE);
 		}
+		
 	}
 }
+
